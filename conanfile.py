@@ -73,7 +73,7 @@ class QXlsxConan(ConanFile):
         # TODO: back to global scope in conan v2 once cmake_find_package* generators removed
         self.cpp_info.components["qxlsx_core"].libs = ["QXlsx"]
         self.cpp_info.components["qxlsx_core"].includedirs = [os.path.join("include", "QXlsx")]
-        self.cpp_info.components["qxlsx_core"].requires = ["qt::qtCore"]
+        self.cpp_info.components["qxlsx_core"].requires = ["qt::qtCore", "qt::qtGui"]
 
         # TODO: to remove in conan v2 once cmake_find_package* generators removed
         self.cpp_info.names["cmake_find_package"] = "QXlsx"
